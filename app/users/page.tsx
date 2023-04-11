@@ -1,13 +1,15 @@
 import Link from "next/link";
-import fetchUsers from "../api/fetch-users";
+import fetchUsers from "@/lib/fetch-users";
+
+// import { User } from "@/lib/constants";
+
+export type User = {
+    id: string;
+    name: string;
+}
 
 export const metadata = {
     title: 'Users'
-}
-
-type User = {
-    id: string;
-    name: string;
 }
 
 export default async function UsersPage () {
